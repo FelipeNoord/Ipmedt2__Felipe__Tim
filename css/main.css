@@ -1,16 +1,19 @@
-*{
-    padding: 0;
+*,
+*::before,
+*::after {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-main{
-    height: 100%;
-    width: 100%;
-    left: 50%;
-    top: 50%;
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.55;
+    max-width: 114rem;
     margin: 0 auto;
-}
-
-.main_background{
-    
 }
