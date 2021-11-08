@@ -1,3 +1,4 @@
+// Random Masks
 const maskImgElement = document.getElementById('js--mask--img');
 const masksImgs = [
     '../img/pukmasker1.jpg',
@@ -10,11 +11,11 @@ const masksImgs = [
     '../img/pukmasker8.jpg',
     '../img/pukmasker9.jpg',
 ];
-let x = -1;
+let masksImgHelper = -1;
 
 const displayNextImg = () => {
-    x = (x === masksImgs.length - 1) ? 0 : x + 1;
-    maskImgElement.src = masksImgs[x];
+    masksImgHelper = (masksImgHelper === masksImgs.length - 1) ? 0 : masksImgHelper + 1;
+    maskImgElement.src = masksImgs[masksImgHelper];
 }
 
 const startDisplayImgTimer = () => {
@@ -22,3 +23,7 @@ const startDisplayImgTimer = () => {
 }
 
 startDisplayImgTimer();
+
+// Start Button
+const startButton = document.getElementById('js--start--button');
+startButton.addEventListener('click', () => console.log('Ik klik!'));
