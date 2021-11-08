@@ -58,7 +58,7 @@ body {
     position: absolute;
     top: 150%;
     left: 0;
-    width: 110%;
+    width: 100%;
     height: 100%;
     background-color: var(--light-color);
     clip-path: polygon(50% 100%, 0 0, 100% 0);
@@ -96,6 +96,23 @@ body {
     100% {
         transform: translateY(0%);
     }
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Keyframe Classes */
+.popup {
+    animation: popup forwards 1s ease;
 }
 
 /* Utility Classes */

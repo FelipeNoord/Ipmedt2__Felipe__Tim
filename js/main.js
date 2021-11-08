@@ -27,3 +27,16 @@ startDisplayImgTimer();
 // Start Button
 const startButton = document.getElementById('js--start--button');
 startButton.addEventListener('click', () => console.log('Ik klik!'));
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        const setupImg = entry.target.querySelector('#js--setup--img');
+
+        if(entry.isIntersecting) {
+            setupImg.classList.add('popup');
+            return;
+        }
+    });
+});
+
+observer.observe(document.getElementById('setup'));
