@@ -13,23 +13,26 @@
 </head>
 
 <body>
-    <header>
-        <figure class="mask">
-            <img class="mask__img" src="img/pukmasker1.webp" alt="Masker of PUK*" id="js--mask--img">
-        </figure>
-        <div class="u-start-container">
-            <a href="#intro">
-                <button id="js--start--button" class="start-button">Start</button>
-            </a>
-        </div>
-    </header>
     <main>
+        <section class="mask">
+            <figure class="mask__figure">
+                <img src="img/pukmasker1.webp" alt="A masker of PUK*" class="mask__figure__img">
+            </figure>
+            <div class="u-center-container">
+                <a href="#one" class="mask__start">Start</a>
+            </div>            
+        </section>
         <div class="u-scroll-container">
-            <section id="intro" class="scroll">
-                <h1>Hello World!</h1>
+            <section id="one" class="scroll intro">
+                <h3 class="scroll__title">Title</h3>
+                <p class="scroll__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ad esse modi obcaecati debitis sequi repellendus dolorem aliquid! Sapiente eum mollitia natus repudiandae dolore totam facilis quod doloremque eius animi.</p>
             </section>
-            <section id="masks" class="scroll">
-                <h1>Hello World!</h1>
+            <section id="second" class="scroll setup">
+                <h3 class="scroll__title">Hoe zit PUK* in elkaar?</h3>
+                <div class="u-grid-container">
+                    <img class="scroll__img" src="img/setup.webp" alt="De setup van PUK*">
+                    <p class="scroll__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ad esse modi obcaecati debitis sequi repellendus dolorem aliquid! Sapiente eum mollitia natus repudiandae dolore totam facilis quod doloremque eius animi.</p>
+                </div>
             </section>
         </div>
     </main>
