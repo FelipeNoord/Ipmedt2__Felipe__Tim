@@ -1,15 +1,15 @@
 // Random Masks
 const maskImgElement = document.getElementById('js--mask--img');
 const masksImgs = [
-    '../img/pukmasker1.jpg',
-    '../img/pukmasker2.jpg',
-    '../img/pukmasker3.jpg',
-    '../img/pukmasker4.jpg',
-    '../img/pukmasker5.jpg',
-    '../img/pukmasker6.jpg',
-    '../img/pukmasker7.jpg',
-    '../img/pukmasker8.jpg',
-    '../img/pukmasker9.jpg',
+    '../img/pukmasker1.webp',
+    '../img/pukmasker2.webp',
+    '../img/pukmasker3.webp',
+    '../img/pukmasker4.webp',
+    '../img/pukmasker5.webp',
+    '../img/pukmasker6.webp',
+    '../img/pukmasker7.webp',
+    '../img/pukmasker8.webp',
+    '../img/pukmasker9.webp',
 ];
 let masksImgHelper = -1;
 
