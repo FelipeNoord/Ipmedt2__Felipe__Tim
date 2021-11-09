@@ -14,9 +14,11 @@
 
 html {
     font-size: 62.5%;
+    
 }
 
 body {
+    overflow-x: hidden;
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
     line-height: 1.55;
@@ -36,7 +38,7 @@ header {
 }
 
 .mask__img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 

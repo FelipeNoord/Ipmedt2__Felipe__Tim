@@ -67,6 +67,6 @@ function showFunction() {
 maskerInteractie.addEventListener("click", function() { addAnimation()})
 
 function addAnimation() {
-    maskerInteractie.style.transform = "translateX(-100%)"
+    maskerInteractie.style.transform = "scale(5)"
     console.log("hallo ik werk");
 }
