@@ -13,13 +13,13 @@
 //     }
 // }
 
-
-
-
-
-
-// Random Masks
+//Declared Variables
 const maskImgElement = document.getElementById('js--mask--img');
+let masksImgHelper = -1;
+const startButton = document.getElementById('js--start--button');
+const maskerInteractie = document.getElementById('js--maskInteraction');
+// Random Masks
+
 const masksImgs = [
     '../img/pukmasker1.jpg',
     '../img/pukmasker2.jpg',
@@ -31,7 +31,7 @@ const masksImgs = [
     '../img/pukmasker8.jpg',
     '../img/pukmasker9.jpg',
 ];
-let masksImgHelper = -1;
+
 
 const displayNextImg = () => {
     masksImgHelper = (masksImgHelper === masksImgs.length - 1) ? 0 : masksImgHelper + 1;
@@ -45,5 +45,28 @@ const startDisplayImgTimer = () => {
 startDisplayImgTimer();
 
 // Start Button
-const startButton = document.getElementById('js--start--button');
+
 startButton.addEventListener('click', () => console.log('Ik klik!'));
+
+// Scroll Text Appear
+window.addEventListener("scroll", function() {showFunction()});
+
+function showFunction() {
+    if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
+        document.getElementById("js--info--text1").style.display = "block";
+    }
+    if (document.body.scrollTop > 1800 || document.documentElement.scrollTop > 1800) {
+        document.getElementById("js--info--text2").style.display = "block";
+    }
+    if (document.body.scrollTop > 2700 || document.documentElement.scrollTop > 2700) {
+        document.getElementById("js--info--text3").style.display = "block";
+    }
+
+}
+
+maskerInteractie.addEventListener("click", function() { addAnimation()})
+
+function addAnimation() {
+    maskerInteractie.style.transform = "translateX(-100%)"
+    console.log("hallo ik werk");
+}
