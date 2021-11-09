@@ -22,8 +22,8 @@ body {
     line-height: 1.55;
     max-width: 114rem;
     margin: 0 auto;
-    background-color: var(--bg-color);
     color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 header {
@@ -75,6 +75,30 @@ header {
     height: 100vh;
 }
 
+.info__text {
+    animation: fadeEffect 3s;
+    position: relative;
+    display: none;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+
+}
+
+.info > img{
+    width: 50%;
+    border-radius: 150rem;
+}
+
+
+#js--maskInteraction{
+    width: 100%;
+    transition: ease-in 3s;
+}
+
+
+
 @keyframes hovering {
     0% {
         transform: translateY(0%);
@@ -85,4 +109,14 @@ header {
     100% {
         transform: translateY(0%);
     }
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes moveToLeft {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(180deg); transform: translateX(-100%);}
 }
