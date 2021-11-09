@@ -14,11 +14,14 @@
 
 html {
     font-size: 62.5%;
+    margin: 0;
+    padding: 0;
     
 }
 
 body {
     overflow-x: hidden;
+    width:100%;
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
     line-height: 1.55;
@@ -28,9 +31,9 @@ body {
     background-color: var(--bg-color);
 }
 
-header {
-    display: grid;
-    grid-template-rows: repeat(2, 50vh);
+#intro-video{
+    object-fit: cover;
+    height: 100vh;
 }
 
 .mask {
@@ -43,9 +46,10 @@ header {
 }
 
 .u-start-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 15%;
 }
 
 .start {
@@ -62,10 +66,10 @@ header {
     position: absolute;
     content: '';
     top: 150%;
-    left: 0%;
+    left: 25%;
     background-color: #FFF;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     animation-name: hovering;
     animation-duration: 2s;
@@ -88,15 +92,69 @@ header {
 
 }
 
-.info > img{
-    width: 50%;
-    border-radius: 150rem;
+.info__maskmenu{
+    width: 100px;
+    height: 100px;
+    background-color: #D0D4D5;
+    border-radius: 50%;
+    position:relative;
+    left: 70%;
+    
+}
+
+.info__maskmenu__closebutton {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    opacity: 0.3;
+    right: 5%;
+    z-index: 1;
+    top: -10%;
+  }
+  .info__maskmenu__closebutton:hover {
+    opacity: 1;
+  }
+  .info__maskmenu__closebutton:before, .info__maskmenu__closebutton:after {
+    left: 7px;
+    position: absolute;
+    content: ' ';
+    height: 15px;
+    width: 2px;
+    background-color: #333;
+    margin-top: 5%;
+  }
+  .info__maskmenu__closebutton:before {
+    transform: rotate(45deg);
+  }
+  .info__maskmenu__closebutton:after {
+    transform: rotate(-45deg);
+  }
+
+.info__maskmenu__figure{
+    height: 50%;
+    position:absolute;
+    right: 50%;
+    top: 50%;
+    transform:translate(50%,-50%);
+}
+
+.info__maskmenu__figure__icon {
+    height: 100%;
+}
+
+#js--mask-icon{
+    display: block;
 }
 
 
+.info__maskmenu__figure__masks{
+    height: 100%;
+}
+
 #js--maskInteraction{
-    width: 100%;
-    transition: ease-in 3s;
+    display: none;
+    
+
 }
 
 
@@ -118,7 +176,29 @@ header {
     to {opacity: 1;}
 }
 
+@keyframes fadeAway{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
 @keyframes moveToLeft {
     from {transform: rotate(0deg)}
     to {transform: rotate(180deg); transform: translateX(-100%);}
+}
+
+@keyframes becomeBigger{
+    from {transform: translate(0)}
+    to{transform: scale(3) translate(-40%, 50%); border-radius: 0px;}
+}
+
+@keyframes becomeSmaller{
+    from {transform: scale(3) translate(-40%, 50%); border-radius: 0px;}
+    to{transform: scale(-2) translate(0, 0); border-radius: 50%;}
+}
+
+@keyframes flip {
+    0% {transform: rotateY(0deg)}
+    25% {transform: rotateY(90deg)}
+    50% {transform: rotateY(90deg)}
+    100% {transform: rotateY(0deg)}
 }

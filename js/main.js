@@ -16,8 +16,14 @@
 //Declared Variables
 const maskImgElement = document.getElementById('js--mask--img');
 let masksImgHelper = -1;
+let transparentMasksImgHelper = 0;
 const startButton = document.getElementById('js--start--button');
-const maskerInteractie = document.getElementById('js--maskInteraction');
+const maskInteraction = document.getElementById('js--maskInteraction');
+const maskMenu = document.getElementById('js--mask-menu');
+const maskIcon = document.getElementById('js--mask-icon');
+const infoArea = document.getElementsByClassName("info");
+const closeButton = document.getElementById('js--closeButton');
+
 // Random Masks
 
 const masksImgs = [
@@ -32,26 +38,32 @@ const masksImgs = [
     '../img/pukmasker9.jpg',
 ];
 
+const transparentMaskImgs = [
+    "../img/transparentmask1.png",
+    "../img/transparentmask2.png",
+    "../img/transparentmask3.png",
+    "../img/transparentmask4.png",
+    "../img/transparentmask5.png",
+    "../img/transparentmask6.png",
+    "../img/transparentmask7.png",
+    "../img/transparentmask8.png",
+    "../img/transparentmask9.png"
+]
 
-const displayNextImg = () => {
-    masksImgHelper = (masksImgHelper === masksImgs.length - 1) ? 0 : masksImgHelper + 1;
-    maskImgElement.src = masksImgs[masksImgHelper];
-}
 
-const startDisplayImgTimer = () => {
-    setInterval(displayNextImg, 3000);
-}
+// const displayNextImg = () => {
+//     masksImgHelper = (masksImgHelper === masksImgs.length - 1) ? 0 : masksImgHelper + 1;
+//     maskImgElement.src = masksImgs[masksImgHelper];
+// }
 
-startDisplayImgTimer();
+// const startDisplayImgTimer = () => {
+//     setInterval(displayNextImg, 3000);
+// }
 
-// Start Button
+// startDisplayImgTimer();
 
-startButton.addEventListener('click', () => console.log('Ik klik!'));
-
-// Scroll Text Appear
-window.addEventListener("scroll", function() {showFunction()});
-
-function showFunction() {
+const showFunction = () => {
+    
     if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
         document.getElementById("js--info--text1").style.display = "block";
     }
@@ -64,9 +76,40 @@ function showFunction() {
 
 }
 
-maskerInteractie.addEventListener("click", function() { addAnimation()})
+const addMaskAnimation = () => {
+    maskInteraction.style.animation = "flip 1s forwards";
+    setTimeout(function(){
+        transparentMasksImgHelper = (transparentMasksImgHelper === transparentMaskImgs.length - 1) ? 0 : transparentMasksImgHelper + 1;
+        maskInteraction.src = transparentMaskImgs[transparentMasksImgHelper];
+    },500);
 
-function addAnimation() {
-    maskerInteractie.style.transform = "scale(5)"
-    console.log("hallo ik werk");
+    setTimeout(function(){
+        maskInteraction.style.animation = "none";
+    },1000);
+    
 }
+
+const addMenuAnimation = () => {
+    maskMenu.style.animation = "becomeBigger 2s forwards";
+    maskInteraction.style.display = "block";
+    maskIcon.style.display = "none";
+    console.log("ik werk");
+
+}
+
+const close = () => {
+
+    maskMenu.style.animation = "none";
+    console.log("close");
+}
+
+
+
+closeButton.addEventListener('click', () => close());
+
+
+startButton.addEventListener('click', () => console.log('Ik klik!'));
+window.addEventListener("scroll", () => {showFunction();
+    console.log(document.body.scrollTop);});
+maskInteraction.addEventListener("click", () => { addMaskAnimation()});
+maskMenu.addEventListener("click", () => {addMenuAnimation()});
