@@ -1,42 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/main.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <title>PUK*</title>
-</head>
+        <title>Puk*</title>
+    </head>
 
-<body>
-    <main>
-        <section class="mask">
-            <figure class="mask__figure">
-                <img src="img/pukmasker1.webp" alt="A masker of PUK*" id="js--mask--img" class="mask__figure__img">
-            </figure>
-            <div class="u-center-container">
-                <a href="#intro" id="js--start--button" class="mask__start">Start</a>
-            </div>            
-        </section>
-        <div class="u-scroll-container">
-            <section id="intro" class="scroll intro">
-                <h3 class="scroll__title">Title</h3>
-                <p class="scroll__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ad esse modi obcaecati debitis sequi repellendus dolorem aliquid! Sapiente eum mollitia natus repudiandae dolore totam facilis quod doloremque eius animi.</p>
+    <body>
+        <main>
+            <section class="info">
+                <div class="u-start-container">
+                    <a href="#masks">
+                        <button id="js--start--button" class="start">
+                            Start
+                        </button>
+                    </a>
+                </div>
+                <video autoplay loop muted class="mask" id="intro-video">
+                    <source src="./img/puk.mp4" type="video/mp4" />
+                </video>
             </section>
-            <section id="setup" class="scroll setup">
-                <h3 class="scroll__title">Hoe zit PUK* in elkaar?</h3>
-                <div class="u-grid-container">
-                    <img id="js--setup--img" class="scroll__img" src="img/setup.webp" alt="De setup van PUK*">
-                    <p class="scroll__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ad esse modi obcaecati debitis sequi repellendus dolorem aliquid! Sapiente eum mollitia natus repudiandae dolore totam facilis quod doloremque eius animi.</p>
+            <section id="info" class="info">
+                <h1 class="info__text" id="js--info--text1">
+                    Je staat op het punt PUK* te ontmoeten, een nieuwe vorm van
+                    kunstmatige intelligentie.
+                </h1>
+            </section>
+            <section class="info">
+                <h1 class="info__text" id="js--info--text2">
+                    PUK* is een onafhankelijke, creatieve entiteit. Het is geen
+                    gereedschap of extensie van onze capaciteit. Het lijkt niet
+                    op ons.
+                </h1>
+            </section>
+            <section class="info">
+                <h1 class="info__text" id="js--info--text3">
+                    De creativiteit van PUK* is niet specifiek of toegepast. Het
+                    is chaotisch, enigmatisch en moeilijk te definiëren. Het
+                    moet worden opgezocht.
+                </h1>
+            </section>
+            <section class="info">
+                <h1>Puk* Interface</h1>
+                <div class="info__maskmenu" id="js--mask-menu">
+                    <div
+                        id="js--closeButton"
+                        class="info__maskmenu__closebutton"
+                    ></div>
+
+                    <figure class="info__maskmenu__figure">
+                        <img
+                            class="info__maskmenu__figure__icon"
+                            id="js--mask-icon"
+                            src="./img/maskicon.png"
+                            alt=""
+                        />
+                    </figure>
+                    <figure class="info__maskmenu__figure">
+                        <img
+                            class="info__maskmenu__figure__masks"
+                            id="js--maskInteraction"
+                            src="./img/transparentmask1.png"
+                            alt=""
+                        />
+                    </figure>
                 </div>
             </section>
-        </div>
-    </main>
-    <script src="js/main.js"></script>
-</body>
+            <div class="u-scroll-container">
+                <section id="intro" class="scroll intro">
+                    <h3 class="scroll__title">Title</h3>
+                    <p class="scroll__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nobis ad esse modi obcaecati debitis sequi repellendus
+                        dolorem aliquid! Sapiente eum mollitia natus repudiandae
+                        dolore totam facilis quod doloremque eius animi.
+                    </p>
+                </section>
+                <section id="setup" class="scroll setup">
+                    <h3 class="scroll__title">Hoe zit PUK* in elkaar?</h3>
+                    <div class="u-grid-container">
+                        <img
+                            id="js--setup--img"
+                            class="scroll__img"
+                            src="img/setup.webp"
+                            alt="De setup van PUK*"
+                        />
+                        <p class="scroll__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nobis ad esse modi obcaecati debitis sequi
+                            repellendus dolorem aliquid! Sapiente eum mollitia
+                            natus repudiandae dolore totam facilis quod
+                            doloremque eius animi.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
 
+    <script src="js/main.js"></script>
 </html>
